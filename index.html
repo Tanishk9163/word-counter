@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple, private word counter for your writing.">
+  <title>Word Counter — make every word count</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Word Counter home"><span class="brand-icon" aria-hidden="true">W<span>.</span></span><span>wordcounter<span class="brand-dot">.</span></span></a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark mode</span></button>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow"><span></span> A LITTLE TOOL FOR BIG IDEAS</p>
+        <h1 id="page-title">Make every <em>word</em> count.</h1>
+        <p class="intro-copy">A little space to write, edit, and keep track of your words. Just start typing.</p>
+      </section>
+
+      <section class="workspace" aria-label="Text editor and counts">
+        <div class="editor-top"><div><span class="editor-dot"></span> YOUR WRITING SPACE</div><span class="live"><span></span> LIVE COUNTING</span></div>
+        <label class="sr-only" for="text-input">Your text</label>
+        <textarea id="text-input" placeholder="Start writing or paste your text here..." spellcheck="true"></textarea>
+        <div class="editor-bottom"><span>YOUR IDEAS START HERE <span aria-hidden="true">✳</span></span><div class="actions"><button class="button clear-button" id="clear-button" type="button">Clear text</button><button class="button copy-button" id="copy-button" type="button"><span aria-hidden="true">▢</span> Copy text</button></div></div>
+      </section>
+
+      <section class="stats" aria-label="Text statistics" aria-live="polite" aria-atomic="true">
+        <div class="stat"><span class="stat-number" id="word-count">0</span><span class="stat-label">WORDS</span><span class="stat-icon" aria-hidden="true">Aa</span></div>
+        <div class="stat"><span class="stat-number" id="character-count">0</span><span class="stat-label">CHARACTERS</span><span class="stat-icon" aria-hidden="true">#</span></div>
+        <div class="stat"><span class="stat-number" id="sentence-count">0</span><span class="stat-label">SENTENCES</span><span class="stat-icon" aria-hidden="true">¶</span></div>
+      </section>
+      <p class="privacy-note"><span aria-hidden="true">✳</span> Your words stay right here in your browser.</p>
+      <p class="status" id="status" role="status"></p>
+    </main>
+    <footer><span>Made for words &amp; the people behind them.</span><span>KEEP WRITING <span aria-hidden="true">↗</span></span></footer>
+  </div>
+</body>
+</html>
+
